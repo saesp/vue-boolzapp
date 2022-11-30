@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: ;
+    font-size: ;
+    color: ; */
+    
+}
+.bg-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 80%;
+    height: 700px;
+    background-color: black;
+    display: flex;
+}
+
+
+/* nav */
+.sect-left{
+    width: 35%;
+    background-color: brown;
+}
+
+header{
+    height: 8%;
+    background-color: gray;
+}
+
+.main-left{
+    height: 92%;
+    background-color: blue;
+}
+
+nav{
+    height: 16%;
+    background-color: white;
+}
+    .notifications{
+        height: 60%;
+        background-color: blue;
+    }
+    .search{
+        height: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+        .search input{
+            height: 80%;
+            width: 95%;
+        }
+
+.contacts-list{
+    height: 84%;
+    background-color: green;
+    overflow-y: auto;
+}
+    .contacts-list li{
+        display: block;
+        height: 12%;
+        background-color: red;
+        border-bottom: 1px solid white;
+    }
+
+
+/* chat */
+.sect-right{
+    width: 65%;
+    background-color: yellowgreen;
+}
