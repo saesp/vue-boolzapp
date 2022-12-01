@@ -3,6 +3,7 @@ const {createApp} = Vue;
 createApp({
     data() {
         return {
+            indexActive: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -188,5 +189,8 @@ createApp({
     },
 
     methods: {
+        clickContact(num){
+            this.indexActive = num
+        }
     }
 }).mount('#app')

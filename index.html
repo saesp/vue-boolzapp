@@ -50,8 +50,8 @@
                             </nav>
         
                             <ul class="contacts-list">
-                                <li class="contact" v-for="(contact, index) in contacts">
-                                    <img class="img-avatar" :src=" 'img/avatar' + contact.avatar + '.jpg' " :alt="">
+                                <li class="contact"  v-for="(contact, index) in contacts">
+                                    <img class="img-avatar" @click="clickContact(index)" :src=" 'img/avatar' + contact.avatar + '.jpg' " :alt="">
                                     <span class="contact-middle">
                                         <div class="name-contact">{{contact.name}}</div>
                                         <div class="last-mess">{{contact.messages[contact.messages.length - 1].message}}</div>
@@ -63,31 +63,42 @@
                         </main>
                     </section>
                     
-        
+                    <!-- <ul class="contacts-list">
+                        <li class="contact"  v-for="(contact, index) in contacts">
+                            <img class="img-avatar" @click="clickContact(index)" :src=" 'img/avatar' + contact.avatar + '.jpg' " :alt="">
+                            <span class="contact-middle">
+                                <div class="name-contact">{{contact.name}}</div>
+                                <div class="last-mess">{{contact.messages[contact.messages.length - 1].message}}</div>
+                            </span>
+                            <span class="last-mess">{{contact.messages[contact.messages.length - 1].date}}</span>
+                        </li>                 
+                    </ul> -->
+
                     <!-- SECTION RIGHT -->
                     <section class="sect-right">
                         <!-- HEADER -->
-                        <header class="header-right">
-                            <section>
-                                <img class="img-avatar" src="img/avatar_3.jpg" alt="">
-                                <span class="name-contact">Mario</span>
-                            </section>
-    
-                            <section class="sect-head-i">
-                                <i class="fa-solid fa-paperclip"></i>
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </section>
-                        </header>
-                       
-                    
-                    
-                        <!-- MAIN -->
-                        <main class="main-right">
-                            <div class="chat-mess green-mess">Ciao</div>
-                            <div class="chat-mess green-mess">Come va?</div>
-                            <div class="chat-mess white-mess">Bene, a te?</div>
-                        </main>
+                        <div v-for="(contact, index) in contacts">
+                            <header class="header-right">
+                                <section>
+                                    <img class="img-avatar" :src=" 'img/avatar' + contact.avatar + '.jpg' " alt="">
+                                    <span class="name-contact">{{contact.name}}</span>
+                                </section>
+        
+                                <section class="sect-head-i">
+                                    <i class="fa-solid fa-paperclip"></i>
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </section>
+                            </header>
+                           
+                        
+                        
+                            <!-- MAIN -->
+                            <main class="main-right">
+                                <div v-for="(mess, index) in contact.messages"  class="chat-mess green-mess">{{mess.message}}</div>
+                                <div v-for="(mess, index) in contact.messages"  class="chat-mess white-mess">{{mess.message}}</div>
+                            </main>
+                        </div>
                     
                     
                     
