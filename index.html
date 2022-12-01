@@ -51,12 +51,12 @@
         
                             <ul class="contacts-list">
                                 <li class="contact" v-for="(contact, index) in contacts">
-                                    <!-- <img class="img-avatar" :src="img/avatar{{contact.avatar}}.jpg" alt=""> -->
+                                    <img class="img-avatar" :src="'img/avatar' + 'contact.avatar' + '.jpg'" alt="">
                                     <span class="contact-middle">
                                         <div class="name-contact">{{contact.name}}</div>
-                                        <div class="last-mess">{{contact.messages[1].message}}</div>
+                                        <div class="last-mess">{{contact.messages[contact.message.length - 1].message}}</div>
                                     </span>
-                                    <span class="last-mess">{{contact.messages[1].date}}</span>
+                                    <span class="last-mess">{{contact.messages[contact.message.length - 1].date}}</span>
                                 </li>
                                                         
                             </ul>
