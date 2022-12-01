@@ -183,14 +183,27 @@ createApp({
                         }
                     ],
                 }
-            ]
-            
+            ],
+
+            newMessage: "",
         }
     },
 
     methods: {
-        clickContact(num){
-            this.indexActive = num
+        // Func to click a contact
+        clickContact(numAvatar){
+            this.indexActive = numAvatar
+        },
+
+        // Func to send new message
+        send(){
+            this.contacts[this.indexActive].messages.push(
+                {
+                    date: '10/01/2020 15:50:00', 
+                    message: this.newMessage, 
+                    status: 'sent'
+                });
+            this.newMessage = ""
         }
     }
 }).mount('#app')
