@@ -9,175 +9,106 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="bg-container1">
-        <div class="bg-container2">
-            <div class="container">
-                
-                <!-- SECTION LEFT -->
-                <section class="sect-left">
-                    <!-- header left -->
-                    <header class="header-left">
-
-                        <section>
-                            <img class="img-avatar" src="img/avatar_2.jpg" alt="">
-                            <span class="name-contact">Salvatore Esposito</span>
-                        </section>
-
-                        <section class="sect-head-i">
-                            <i class="fa-solid fa-circle-notch"></i>
-                            <i class="fa-solid fa-message"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </section>
-                    </header>
+    <div id="app">
+        <div class="bg-container1">
+            <div class="bg-container2">
+                <div class="container">
+                    
+                    <!-- SECTION LEFT -->
+                    <section class="sect-left">
+                        <!-- header left -->
+                        <header class="header-left">
     
+                            <section>
+                                <img class="img-avatar" src="img/avatar_2.jpg" alt="">
+                                <span class="name-contact">Salvatore Esposito</span>
+                            </section>
     
-                    <!-- main left -->
-                    <main class="main-left">
-
-                        <nav>
-                            <div class="notifications">
-                                <i class="fa-solid fa-bell-slash"></i>
-                                <span>
-                                    <div>Ricevi notifiche di nuovi messaggi</div>
-                                    <div><a href="#">Attiva notifiche desktop</a></div>
-                                </span>
-                            </div>
-                            <div class="search">
+                            <section class="sect-head-i">
+                                <i class="fa-solid fa-circle-notch"></i>
+                                <i class="fa-solid fa-message"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </section>
+                        </header>
+        
+        
+                        <!-- main left -->
+                        <main class="main-left">
+    
+                            <nav>
+                                <div class="notifications">
+                                    <i class="fa-solid fa-bell-slash"></i>
+                                    <span>
+                                        <div>Ricevi notifiche di nuovi messaggi</div>
+                                        <div><a href="#">Attiva notifiche desktop</a></div>
+                                    </span>
+                                </div>
+                                <div class="search">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <input type="search" placeholder="Cerca o inizia una nuova chat">
+                                </div>
+                            </nav>
+        
+                            <ul class="contacts-list">
+                                <li class="contact" v-for="(contact, index) in contacts">
+                                    <!-- <img class="img-avatar" :src="img/avatar{{contact.avatar}}.jpg" alt=""> -->
+                                    <span class="contact-middle">
+                                        <div class="name-contact">{{contact.name}}</div>
+                                        <div class="last-mess">{{contact.messages.message}}</div>
+                                    </span>
+                                    <span class="last-mess">{{}}</span>
+                                </li>
+                                                        
+                            </ul>
+                        </main>
+                    </section>
+                    
+        
+                    <!-- SECTION RIGHT -->
+                    <section class="sect-right">
+                        <!-- HEADER -->
+                        <header class="header-right">
+                            <section>
+                                <img class="img-avatar" src="img/avatar_3.jpg" alt="">
+                                <span class="name-contact">Mario</span>
+                            </section>
+    
+                            <section class="sect-head-i">
+                                <i class="fa-solid fa-paperclip"></i>
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                                <input type="search" placeholder="Cerca o inizia una nuova chat">
-                            </div>
-                        </nav>
-    
-                        <ul class="contacts-list">
-                            <li class="contact">
-                                <img class="img-avatar"src="img/avatar_1.jpg" alt="">
-                                <span class="contact-middle">
-                                    <div class="name-contact">Michele</div>
-                                    <div class="last-mess">ciao </div>
-                                </span>
-                                <span class="last-mess">12:00</span>
-                            </li>
-                            <li class="contact">
-                                <img class="img-avatar" src="img/avatar_1.jpg" alt="">
-                                <span class="contact-middle">
-                                    <div class="name-contact">Michele</div>
-                                    <div class="last-mess"></div>
-                                </span>
-                                <span class="last-mess">12:00</span>
-                            </li>
-                            <li class="contact">
-                                <img class="img-avatar" src="img/avatar_1.jpg" alt="">
-                                <span class="contact-middle">
-                                    <div class="name-contact">Michele</div>
-                                    <div class="last-mess"></div>
-                                </span>
-                                <span class="last-mess">12:00</span>
-                            </li>
-                            <li class="contact">
-                                <img class="img-avatar" src="img/avatar_1.jpg" alt="">
-                                <span class="contact-middle">
-                                    <div class="name-contact">Michele</div>
-                                    <div class="last-mess"></div>
-                                </span>
-                                <span class="last-mess">12:00</span>
-                            </li>
-                            <li class="contact">
-                                <img class="img-avatar" src="img/avatar_1.jpg" alt="">
-                                <span class="contact-middle">
-                                    <div class="name-contact">Michele</div>
-                                    <div class="last-mess"></div>
-                                </span>
-                                <span class="last-mess">12:00</span>
-                            </li>
-                            <li class="contact">
-                                <img class="img-avatar" src="img/avatar_1.jpg" alt="">
-                                <span class="contact-middle">
-                                    <div class="name-contact">Michele</div>
-                                    <div class="last-mess"></div>
-                                </span>
-                                <span class="last-mess">12:00</span>
-                            </li>
-                            <li class="contact">
-                                <img class="img-avatar" src="img/avatar_1.jpg" alt="">
-                                <span class="contact-middle">
-                                    <div class="name-contact">Michele</div>
-                                    <div class="last-mess"></div>
-                                </span>
-                                <span class="last-mess">12:00</span>
-                            </li>
-                            <li class="contact">
-                                <img class="img-avatar" src="img/avatar_1.jpg" alt="">
-                                <span class="contact-middle">
-                                    <div class="name-contact">Michele</div>
-                                    <div class="last-mess"></div>
-                                </span>
-                                <span class="last-mess">12:00</span>
-                            </li>
-                            <li class="contact">
-                                <img class="img-avatar" src="img/avatar_1.jpg" alt="">
-                                <span class="contact-middle">
-                                    <div class="name-contact">Michele</div>
-                                    <div class="last-mess"></div>
-                                </span>
-                                <span class="last-mess">12:00</span>
-                            </li>
-                            <li class="contact">
-                                <img class="img-avatar" src="img/avatar_1.jpg" alt="">
-                                <span class="contact-middle">
-                                    <div class="name-contact">Michele</div>
-                                    <div class="last-mess"></div>
-                                </span>
-                                <span class="last-mess">12:00</span>
-                            </li>                        
-                        </ul>
-                    </main>
-                </section>
-                
-    
-                <!-- SECTION RIGHT -->
-                <section class="sect-right">
-                    <!-- HEADER -->
-                    <header class="header-right">
-                        <section>
-                            <img class="img-avatar" src="img/avatar_3.jpg" alt="">
-                            <span class="name-contact">Mario</span>
-                        </section>
-
-                        <section class="sect-head-i">
-                            <i class="fa-solid fa-paperclip"></i>
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </section>
-                    </header>
-                   
-                
-                
-                    <!-- MAIN -->
-                    <main class="main-right">
-                        <div class="chat-mess green-mess">Ciao</div>
-                        <div class="chat-mess green-mess">Come va?</div>
-                        <div class="chat-mess white-mess">Bene, a te?</div>
-                    </main>
-                
-                
-                
-                    <!-- FOOTER -->
-                    <footer class="footer-right">
-                        <i class="fa-regular fa-face-smile"></i>
-                        <input type="search" placeholder="Invia un messaggio">
-                        <i class="fa-solid fa-microphone"></i>
-                    </footer>
-    
-                </section>
-           </div>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </section>
+                        </header>
+                       
+                    
+                    
+                        <!-- MAIN -->
+                        <main class="main-right">
+                            <div class="chat-mess green-mess">Ciao</div>
+                            <div class="chat-mess green-mess">Come va?</div>
+                            <div class="chat-mess white-mess">Bene, a te?</div>
+                        </main>
+                    
+                    
+                    
+                        <!-- FOOTER -->
+                        <footer class="footer-right">
+                            <i class="fa-regular fa-face-smile"></i>
+                            <input type="search" placeholder="Invia un messaggio">
+                            <i class="fa-solid fa-microphone"></i>
+                        </footer>
+        
+                    </section>
+               </div>
+            </div>
         </div>
-    </div>
+        
     
-
-
-
-
-    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
-    <script src="logic.js"></script>
+    
+    
+    
+        <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+        <script src="logic.js"></script>
+    </div>
 </body>
 </html>
