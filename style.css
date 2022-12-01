@@ -171,11 +171,33 @@ ul.contacts-list{
     /* border-left: 1px solid #b1b1b1; */
 }
 .main-right{
+    padding-top: 20px;
     height: 84%;
     background-image: url(img/mine.jpg);
-    overflow-y:scroll;
+    overflow-y: scroll;
 }
+    .chat-mess{
+        font-size: 13px;
+        margin-bottom: 10px;
+        padding: 8px 7px;
+        border-radius: 5px;
+        display: inline-block;
+        display: table;
+    }
+    .green-mess{
+        background-color: rgb(111, 255, 111);
+        margin-left: auto;
+        margin-right: 20px;
+    }
+    .white-mess{
+        background-color: white;
+        margin-right: auto;
+        margin-left: 20px;
+    }
 
+
+
+/* FOOTER RIGHT */
 .footer-right{
     height: 8%;
     display: flex;
