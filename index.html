@@ -50,8 +50,8 @@
                             </nav>
         
                             <ul class="contacts-list">
-                                <li class="contact"  v-for="(contact, index) in contacts">
-                                    <img class="img-avatar" @click="clickContact(index)" :src=" 'img/avatar' + contact.avatar + '.jpg' " :alt="">
+                                <li class="contact"  v-for="(contact, index) in contacts" @click="clickContact(index)">
+                                    <img class="img-avatar" :src=" 'img/avatar' + contact.avatar + '.jpg' " :alt="">
                                     <span class="contact-middle">
                                         <div class="name-contact">{{contact.name}}</div>
                                         <div class="last-mess">{{contact.messages[contact.messages.length - 1].message}}</div>
@@ -63,16 +63,7 @@
                         </main>
                     </section>
                     
-                    <!-- <ul class="contacts-list">
-                        <li class="contact"  v-for="(contact, index) in contacts">
-                            <img class="img-avatar" @click="clickContact(index)" :src=" 'img/avatar' + contact.avatar + '.jpg' " :alt="">
-                            <span class="contact-middle">
-                                <div class="name-contact">{{contact.name}}</div>
-                                <div class="last-mess">{{contact.messages[contact.messages.length - 1].message}}</div>
-                            </span>
-                            <span class="last-mess">{{contact.messages[contact.messages.length - 1].date}}</span>
-                        </li>                 
-                    </ul> -->
+        
 
                     <!-- SECTION RIGHT -->
                     <section class="sect-right">
@@ -95,8 +86,8 @@
                         
                             <!-- MAIN -->
                             <main class="main-right">
-                                <div v-for="(mess, index) in contact.messages" :class="mess.status === 'sent' ? 'active' : ''" class="chat-mess green-mess">{{mess.message}}</div>
-                                <div v-for="(mess, index) in contact.messages" :class="mess.status === 'received' ? 'active' : ''" class="chat-mess white-mess">{{mess.message}}</div>
+                                <div  :class="contact.messages.status === 'sent' ? 'green-mess' : ''" class="chat-mess">{{contact.messages.message}}</div>
+                                <div  :class="contact.messages.status === 'received' ? 'white-mess' : ''" class="chat-mess">{{contact.messages.message}}</div>
                             </main>
                         </div>
                     

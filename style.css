@@ -176,22 +176,29 @@ ul.contacts-list{
     height: 84%;
     background-image: url(img/mine.jpg);
     overflow-y: scroll;
+    /* display: none; */
 }
+/* .main-right.active{
+    padding-top: 20px;
+    height: 84%;
+    background-image: url(img/mine.jpg);
+    overflow-y: scroll;
+    display: block;
+} */
     .chat-mess{
-        font-size: 13px;
-        margin-bottom: 10px;
-        padding: 8px 7px;
-        border-radius: 5px;
-        display: none;
-    }
-    
-    .chat-mess.active{
         font-size: 13px;
         margin-bottom: 10px;
         padding: 8px 7px;
         border-radius: 5px;
         display: table;
     }
+    /* .chat-mess.active{
+        font-size: 13px;
+        margin-bottom: 10px;
+        padding: 8px 7px;
+        border-radius: 5px;
+        display: table;
+    } */
     .green-mess{
         background-color: rgb(111, 255, 111);
         margin-left: auto;
