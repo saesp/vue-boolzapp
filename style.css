@@ -165,7 +165,6 @@ ul.contacts-list{
 /* SECTION RIGHT */
 .sect-right{
     width: 65%;
-    background-color: yellowgreen;
 }
 
 .header-right{
@@ -190,15 +189,15 @@ ul.contacts-list{
         margin-bottom: 10px;
         padding: 8px 7px;
         border-radius: 5px;
-        display: table;
+        display: none;
     }
-    /* .chat-mess.active{
+    .chat-mess.active{
         font-size: 13px;
         margin-bottom: 10px;
         padding: 8px 7px;
         border-radius: 5px;
         display: table;
-    } */
+    }
     .green-mess{
         background-color: rgb(111, 255, 111);
         margin-left: auto;

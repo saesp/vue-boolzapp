@@ -67,12 +67,12 @@
 
                     <!-- SECTION RIGHT -->
                     <section class="sect-right">
-                        <!-- HEADER -->
-                        <div v-for="(contact, index) in contacts">
+                        
+                            <!-- HEADER -->
                             <header class="header-right">
                                 <section>
-                                    <img class="img-avatar" :src=" 'img/avatar' + contact.avatar + '.jpg' " alt="">
-                                    <span class="name-contact">{{contact.name}}</span>
+                                    <img class="img-avatar" :src=" 'img/avatar' + contacts[indexActive].avatar + '.jpg' " alt="">
+                                    <span class="name-contact">{{contacts[indexActive].name}}</span>
                                 </section>
         
                                 <section class="sect-head-i">
@@ -82,13 +82,14 @@
                                 </section>
                             </header>
                            
-                        
+                        <div >
                         
                             <!-- MAIN -->
                             <main class="main-right">
-                                <div  :class="contact.messages.status === 'sent' ? 'green-mess' : ''" class="chat-mess">{{contact.messages.message}}</div>
-                                <div  :class="contact.messages.status === 'received' ? 'white-mess' : ''" class="chat-mess">{{contact.messages.message}}</div>
+                                <div v-for="(mess, index) in contacts[indexActive].messages" :class="mess.status === 'sent' ? 'active green-mess' : ''" class="chat-mess">{{mess.message}}</div>
+                                <div v-for="(mess, index) in contacts[indexActive].messages" :class="mess.status === 'received' ? 'active white-mess' : ''" class="chat-mess">{{mess.message}}</div>
                             </main>
+
                         </div>
                     
                     
