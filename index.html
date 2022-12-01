@@ -82,15 +82,16 @@
                                 </section>
                             </header>
                            
-                        <div >
                         
                             <!-- MAIN -->
                             <main class="main-right">
-                                <div v-for="(mess, index) in contacts[indexActive].messages" :class="mess.status === 'sent' ? 'active green-mess' : ''" class="chat-mess">{{mess.message}}</div>
-                                <div v-for="(mess, index) in contacts[indexActive].messages" :class="mess.status === 'received' ? 'active white-mess' : ''" class="chat-mess">{{mess.message}}</div>
+                                <div v-for="(mess, index) in contacts[2].messages">
+                                    <div :class="mess.status === 'sent' ? 'active green-mess' : ''" class="chat-mess">{{mess.message}}</div>
+                                    <div :class="mess.status === 'received' ? 'active white-mess' : ''" class="chat-mess">{{mess.message}}</div>
+                                </div>
                             </main>
 
-                        </div>
+                       
                     
                     
                     
