@@ -95,8 +95,8 @@
                         
                             <!-- MAIN -->
                             <main class="main-right">
-                                <div v-for="(mess, index) in contact.messages"  class="chat-mess green-mess">{{mess.message}}</div>
-                                <div v-for="(mess, index) in contact.messages"  class="chat-mess white-mess">{{mess.message}}</div>
+                                <div v-for="(mess, index) in contact.messages" :class="mess.status === 'sent' ? 'active' : ''" class="chat-mess green-mess">{{mess.message}}</div>
+                                <div v-for="(mess, index) in contact.messages" :class="mess.status === 'received' ? 'active' : ''" class="chat-mess white-mess">{{mess.message}}</div>
                             </main>
                         </div>
                     

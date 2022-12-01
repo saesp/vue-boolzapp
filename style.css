@@ -182,7 +182,14 @@ ul.contacts-list{
         margin-bottom: 10px;
         padding: 8px 7px;
         border-radius: 5px;
-        display: inline-block;
+        display: none;
+    }
+    
+    .chat-mess.active{
+        font-size: 13px;
+        margin-bottom: 10px;
+        padding: 8px 7px;
+        border-radius: 5px;
         display: table;
     }
     .green-mess{
