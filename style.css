@@ -148,7 +148,8 @@ ul.contacts-list{
         .contact-middle{
             align-self: baseline;
             margin-top: 8px;
-            margin-right: 225px;
+            width: 200px;
+            margin-right: 15px;
         }
         .name-contact{
             color: black;
