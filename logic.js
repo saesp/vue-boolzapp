@@ -213,7 +213,7 @@ createApp({
             setTimeout(() => {
 
                 // random answers
-                let things = ['Ciaooo', 'Come stai??', 'Non mi va di parlare', 'Non scrivermi, grazie', 'Che vuoi?', 'Ti aspetto', 'Ci vediamo?', 'Finalmente mi scrivi'];
+                const things = ['Ciaooo', 'Come stai??', 'Non mi va di parlare', 'Non scrivermi, grazie', 'Che vuoi?', 'Ti aspetto', 'Ci vediamo?', 'Finalmente mi scrivi'];
                 let thing = things[Math.floor(Math.random()*things.length)];
 
                 this.contacts[this.indexActive].messages.push(
@@ -227,13 +227,14 @@ createApp({
             }, 1000);
         },
 
-        
         // Func to search a contact
-        // searchContact() {
-        //     if (contactLetters === this.contacts.name) {
-
-        //     }
-        // }
+        searchContact() {
+            for (let i = 0; i < this.contacts.length; i++){
+                if (this.contactLetters !== this.contacts[i].name) {
+                    this.contacts[i].visible = false;
+                }
+            }
+        }
     }
 
 }).mount('#app')

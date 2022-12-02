@@ -51,13 +51,13 @@
                             </nav>
         
                             <ul class="contacts-list">
-                                <li class="contact"  v-for="(contact, index) in contacts" @click="clickContact(index)">
-                                    <img class="img-avatar" :src=" 'img/avatar' + contact.avatar + '.jpg' " :alt="">
-                                    <span class="contact-middle">
+                                <li class="contact" v-for="(contact, index) in contacts" @click="clickContact(index)">
+                                    <img v-if="contact.visible === true" class="img-avatar" :src=" 'img/avatar' + contact.avatar + '.jpg' " :alt="">
+                                    <span v-if="contact.visible === true" class="contact-middle">
                                         <div class="name-contact">{{contact.name}}</div>
                                         <div class="last-mess">{{contact.messages[contact.messages.length - 1].message}}</div>
                                     </span>
-                                    <span class="last-date">{{contact.messages[contact.messages.length - 1].date}}</span>
+                                    <span v-if="contact.visible === true" class="last-date">{{contact.messages[contact.messages.length - 1].date}}</span>
                                 </li>
                                                         
                             </ul>
