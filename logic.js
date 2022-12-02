@@ -202,8 +202,25 @@ createApp({
                     date: '15:50', 
                     message: this.newMessage, 
                     status: 'sent'
-                });
-            this.newMessage = ""
-        }
+                }
+            );
+            
+            this.newMessage = "";
+
+            setTimeout(messReceivedTime, 1000);
+            function messReceivedTime() {
+                this.contacts[this.indexActive].messages.push(
+                    {
+                        date: '15:51', 
+                        message: "Ciao", 
+                        status: 'received'
+                    }
+                )
+            }
+            
+        },
+
+        // ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo
+
     }
 }).mount('#app')
