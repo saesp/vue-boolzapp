@@ -21,7 +21,7 @@
                         <header class="header-left">
     
                             <section>
-                                <img class="img-avatar" src="img/avatar_2.jpg" alt="">
+                                <img class="img-avatar" src="img/me.jpg" alt="">
                                 <span class="name-contact">Salvatore Esposito</span>
                             </section>
     
@@ -46,7 +46,7 @@
                                 </div>
                                 <div class="search">
                                     <i class="fa-solid fa-magnifying-glass"></i>
-                                    <input type="search" placeholder="Cerca o inizia una nuova chat">
+                                    <input type="search" v-model="contactLetters" @KeyUp.enter="searchContact" placeholder="Cerca o inizia una nuova chat" >
                                 </div>
                             </nav>
         
@@ -69,7 +69,7 @@
                     <!-- SECTION RIGHT -->
                     <section class="sect-right">
                         
-                            <!-- HEADER -->
+                            <!-- header right -->
                             <header class="header-right">
                                 <section>
                                     <img class="img-avatar" :src=" 'img/avatar' + contacts[indexActive].avatar + '.jpg' " alt="">
@@ -85,7 +85,7 @@
                            
 
                         
-                            <!-- MAIN -->
+                            <!-- main right -->
                             <main class="main-right">
                                 <div v-for="(mess, index) in contacts[indexActive].messages">
                                     <div :class="mess.status === 'sent' ? 'active green-mess' : ''" class="chat-mess">
@@ -100,7 +100,7 @@
 
                        
                     
-                        <!-- FOOTER -->
+                        <!-- footer right -->
                         <footer class="footer-right">
                             <i class="fa-regular fa-face-smile"></i>
                             <input type="search" placeholder="Invia un messaggio" v-model="newMessage" @KeyUp.enter="send">

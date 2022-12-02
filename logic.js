@@ -186,6 +186,8 @@ createApp({
             ],
 
             newMessage: "",
+
+            contactLetters: "",
         }
     },
 
@@ -207,20 +209,31 @@ createApp({
             
             this.newMessage = "";
 
-            setTimeout(messReceivedTime, 1000);
-            function messReceivedTime() {
+            // Func to receive answers after 1 second
+            setTimeout(() => {
+
+                // random answers
+                let things = ['Ciaooo', 'Come stai??', 'Non mi va di parlare', 'Non scrivermi, grazie', 'Che vuoi?', 'Ti aspetto', 'Ci vediamo?', 'Finalmente mi scrivi'];
+                let thing = things[Math.floor(Math.random()*things.length)];
+
                 this.contacts[this.indexActive].messages.push(
                     {
                         date: '15:51', 
-                        message: "Ciao", 
+                        message: thing,
                         status: 'received'
                     }
                 )
-            }
-            
+
+            }, 1000);
         },
 
-        // ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo
+        
+        // Func to search a contact
+        // searchContact() {
+        //     if (contactLetters === this.contacts.name) {
 
+        //     }
+        // }
     }
+
 }).mount('#app')
