@@ -68,7 +68,6 @@ i{
 /* SECTION LEFT */
 .sect-left{
     width: 35%;
-    background-color: brown;
 }
 
 .header-left{
@@ -77,7 +76,6 @@ i{
 
 .main-left{
     height: 92%;
-    background-color: blue;
 }
 
 /* nav */
@@ -154,14 +152,19 @@ ul.contacts-list{
             align-self: baseline;
             margin-top: 8px;
             width: 200px;
-            margin-right: 15px;
+            margin-right: 30px;
         }
         .name-contact{
             color: black;
+            margin-bottom: 3px;
         }
         .last-mess{
             color: #b1b1b1;
             font-size: 11px;
+        }
+        .last-date{
+            color: #b1b1b1;
+            font-size: 10px;
             align-self: baseline;
         }
 
@@ -179,16 +182,8 @@ ul.contacts-list{
     padding-top: 20px;
     height: 84%;
     background-image: url(img/mine.jpg);
-    overflow-y: scroll;
-    /* display: none; */
+    overflow-y: auto;
 }
-/* .main-right.active{
-    padding-top: 20px;
-    height: 84%;
-    background-image: url(img/mine.jpg);
-    overflow-y: scroll;
-    display: block;
-} */
     .chat-mess{
         font-size: 13px;
         margin-bottom: 10px;
@@ -212,6 +207,13 @@ ul.contacts-list{
         background-color: white;
         margin-right: auto;
         margin-left: 20px;
+    }
+    .chat-date{
+        color: #b1b1b1;
+        font-size: 10px;
+        margin-left: 30px;
+        position: relative;
+        bottom: -5px;
     }
 
 
