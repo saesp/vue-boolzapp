@@ -234,6 +234,10 @@ createApp({
                     this.contacts[i].visible = false;
                 }
             }
+    
+            if (this.contactLetters == "") {
+                this.contacts.visible = true;
+            }
         }
     }
 
