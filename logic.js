@@ -1,3 +1,8 @@
+var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var time = today.getHours() + ":" + today.getMinutes() // + ":" + today.getSeconds();
+var dateTime = date+' '+time;
+
 const {createApp} = Vue;
 
 createApp({
@@ -201,7 +206,7 @@ createApp({
         send(){
             this.contacts[this.indexActive].messages.push(
                 {
-                    date: '15:50', 
+                    date: time, 
                     message: this.newMessage, 
                     status: 'sent'
                 }
@@ -218,13 +223,13 @@ createApp({
 
                 this.contacts[this.indexActive].messages.push(
                     {
-                        date: '15:51', 
+                        date: time, 
                         message: thing,
                         status: 'received'
                     }
                 )
 
-            }, 1000);
+            }, 1500);
         },
 
         // Func to search a contact

@@ -64,6 +64,10 @@ i{
     border-radius: 100px;
     margin-right: 10px;
 }
+.img-avatar-header.img-avatar{
+    width: 45px;
+    height: 45px;
+}
 
 /* SECTION LEFT */
 .sect-left{
@@ -177,6 +181,10 @@ ul.contacts-list{
 
 .header-right{
     /* border-left: 1px solid #b1b1b1; */
+}
+.last-access{
+    color: #b1b1b1;
+    font-size: 10px;
 }
 .main-right{
     padding-top: 20px;

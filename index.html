@@ -21,7 +21,7 @@
                         <header class="header-left">
     
                             <section>
-                                <img class="img-avatar" src="img/me.jpg" alt="">
+                                <img class="img-avatar-header img-avatar" src="img/me.jpg" alt="">
                                 <span class="name-contact">Salvatore Esposito</span>
                             </section>
     
@@ -72,8 +72,12 @@
                             <!-- header right -->
                             <header class="header-right">
                                 <section>
-                                    <img class="img-avatar" :src=" 'img/avatar' + contacts[indexActive].avatar + '.jpg' " alt="">
-                                    <span class="name-contact">{{contacts[indexActive].name}}</span>
+                                    <img class="img-avatar-header img-avatar" :src=" 'img/avatar' + contacts[indexActive].avatar + '.jpg' " alt="">
+                                    <span> 
+                                        <div class="name-contact">{{contacts[indexActive].name}}</div>
+                                        <div class="last-access" v-if="contacts[indexActive].messages[contacts[indexActive].messages.length - 1].status === 'received'">Ultimo accesso: {{contacts[indexActive].messages[contacts[indexActive].messages.length - 1].date}}</div>
+                                        <div class="last-access" v-else>Sta scrivendo...</div>
+                                    </span>
                                 </section>
         
                                 <section class="sect-head-i">
