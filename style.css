@@ -264,12 +264,12 @@ ul.contacts-list{
 
     .sect-left{
         width: 100%;
-        height: 100vh;
+        height: 90vh;
     }
     
     .sect-right{
         width: 100%;
-        height: 100vh;
+        height: 90vh;
     }
     #sect-chat-list{
         display: block;
