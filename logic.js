@@ -112,7 +112,7 @@ createApp({
                 },
                 {
                     name: 'Claudia',
-                    avatar: '_2',
+                    avatar: '_io',
                     visible: true,
                     messages: [
                         {
@@ -173,7 +173,7 @@ createApp({
                 },
                 {
                     name: 'Giada',
-                    avatar: '_io',
+                    avatar: '_2',
                     visible: true,
                     messages: [
                         {

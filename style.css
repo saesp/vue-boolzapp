@@ -265,9 +265,16 @@ ul.contacts-list{
         background-color: rgb(5 94 84);
     }
 
-    .go-back{
+    
+    .header-right{
+        padding: 0 10px;
+    }
+    .header-right section{
+        margin: 0;
+    }
+    .go-back i{
+        color: white;
         cursor: pointer;
-        margin-left: 10px;
     }
     .img-avatar-header.img-avatar {
         margin-left: 5px;
