@@ -277,15 +277,21 @@ ul.contacts-list{
     }
 
     .header-right{
-        padding: 7px 10px;
+        padding: 7px 10px 7px 7px;
     }
     .header-right section{
         margin: 0;
     }
     .go-back i{
         color: white;
+        padding: 4px 3px;
+        border-radius: 50px;
         cursor: pointer;
     }
+    .go-back i:hover{
+        background-color: #077367;
+    }
+
     .img-avatar-header.img-avatar {
         margin-left: 5px;
     }
@@ -311,6 +317,12 @@ ul.contacts-list{
 
     .header-left{
         font-size: 16px;
+    }
+    
+    .sect-head-i{
+        gap: 20px;
+        font-size: 16px;
+        color: white;
     }
     .sect-head-i i{
         font-size: 16px;
