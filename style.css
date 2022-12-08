@@ -265,7 +265,13 @@ ul.contacts-list{
         background-color: rgb(5 94 84);
     }
 
-    
+    .signature{
+        font-size: 10px;
+        margin-left: 7px;
+    }
+
+
+    /* section right */
     .header-right{
         padding: 7px 10px;
     }
