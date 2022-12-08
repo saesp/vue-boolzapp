@@ -251,9 +251,6 @@ ul.contacts-list{
 
 
 @media screen and (max-width: 500px) {
-    body{
-        background-image: url(img/mine.jpg);
-    }
     .bg-container1{
         display: none;
     }
@@ -277,7 +274,6 @@ ul.contacts-list{
     /* section right */
     .sect-right{
         width: 100%;
-       
     }
 
     .header-right{
@@ -298,7 +294,7 @@ ul.contacts-list{
     }
 
     .main-right{
-        background-color: unset;
+        height: 83vh;
     }
     #sect-chat-list{
         display: block;
@@ -313,25 +309,35 @@ ul.contacts-list{
         height: 100vh;
     }
 
+    .header-left{
+        font-size: 16px;
+    }
     .sect-head-i i{
+        font-size: 16px;
         color: white;
     }
 
-    .notifications{
+    .archive{
         color: black;
         height: 50%;
         background-color: white;
+        display: flex;
+        align-items: center;
     }
-    .notifications i{
-        color: #009688;
-        background-color: unset;
-    }
+        .archive i{
+            color: #009688;
+            background-color: unset;
+            font-size: 18px;
+            padding: 12px 10px;
+            border-radius: 100px;
+            margin: 10px;
+        }
+
     .search{
         height: 50%;
     }
 
 
-    
     .footer-right{
         position: fixed;
         bottom: 0;
@@ -341,6 +347,7 @@ ul.contacts-list{
         background-color: #f3eeea;
     }
         .footer-right input{
+            z-index: 100;
             width: 65%;
             border-radius: 50px;
         }
