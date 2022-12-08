@@ -368,4 +368,10 @@ ul.contacts-list{
             font-size: 19px;
             color: grey;
         }
+        .footer-right i:first-of-type{
+            margin-left: 3%;
+        }
+        .footer-right i:last-of-type{
+            margin-right: 3%;
+        }
 }
