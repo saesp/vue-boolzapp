@@ -199,7 +199,11 @@ createApp({
     methods: {
         // Func to click a contact
         clickContact(numAvatar){
-            this.indexActive = numAvatar
+            this.indexActive = numAvatar;
+
+            //mobile
+            document.getElementById("sect-chat-list").style.display = "none";
+            document.getElementById("sect-chat-mess").style.display = "block";
         },
 
         // Func to send new message
@@ -243,6 +247,11 @@ createApp({
             if (this.contactLetters == "") {
                 this.contacts.visible = true;
             }
+        },
+
+        goBack() {
+            document.getElementById("sect-chat-list").style.display = "block";
+            document.getElementById("sect-chat-mess").style.display = "none";
         }
     }
 
