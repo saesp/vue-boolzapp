@@ -53,11 +53,13 @@
         
                             <ul class="contacts-list">
                                 <li class="contact" v-for="(contact, index) in contacts" @click="clickContact(index)">
-                                    <img v-if="contact.visible === true" class="img-avatar" :src=" 'img/avatar' + contact.avatar + '.jpg' " :alt="">
-                                    <span v-if="contact.visible === true" class="contact-middle">
-                                        <div class="name-contact">{{contact.name}}</div>
-                                        <div class="last-mess">{{contact.messages[contact.messages.length - 1].message}}</div>
-                                    </span>
+                                    <div class="img-name-contact">
+                                        <img v-if="contact.visible === true" class="img-avatar" :src=" 'img/avatar' + contact.avatar + '.jpg' " :alt="">
+                                        <span v-if="contact.visible === true" class="contact-middle">
+                                            <div class="name-contact">{{contact.name}}</div>
+                                            <div class="last-mess">{{contact.messages[contact.messages.length - 1].message}}</div>
+                                        </span>
+                                    </div>
                                     <span v-if="contact.visible === true" class="last-date">{{contact.messages[contact.messages.length - 1].date}}</span>
                                 </li>
                                                         
@@ -160,11 +162,13 @@
 
                     <ul class="contacts-list">
                         <li class="contact" v-for="(contact, index) in contacts" @click="clickContact(index)">
-                            <img v-if="contact.visible === true" class="img-avatar" :src=" 'img/avatar' + contact.avatar + '.jpg' " :alt="">
-                            <span v-if="contact.visible === true" class="contact-middle">
-                                <div class="name-contact">{{contact.name}}</div>
-                                <div class="last-mess">{{contact.messages[contact.messages.length - 1].message}}</div>
-                            </span>
+                            <div class="img-name-contact">
+                                <img v-if="contact.visible === true" class="img-avatar" :src=" 'img/avatar' + contact.avatar + '.jpg' " :alt="">
+                                <span v-if="contact.visible === true" class="contact-middle">
+                                    <div class="name-contact">{{contact.name}}</div>
+                                    <div class="last-mess">{{contact.messages[contact.messages.length - 1].message}}</div>
+                                </span>
+                            </div>
                             <span v-if="contact.visible === true" class="last-date">{{contact.messages[contact.messages.length - 1].date}}</span>
                         </li>
                                                 
