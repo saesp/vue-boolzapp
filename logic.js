@@ -29,7 +29,26 @@ createApp({
                             date: '10/01/2020 16:15',
                             message: 'Tutto fatto!',
                             status: 'received'
-                        }
+                        },
+                        {
+                            date: '10/01/2020 16:20',
+                            message: 'Bravo',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 16:22',
+                            message: ':D',
+                            status: 'received'
+                        },
+                        {
+                            date: '10/01/2020 16:23',
+                            message: 'Ci vediamo domani?',
+                            status: 'received'
+                        },{
+                            date: '10/01/2020 23:22',
+                            message: 'Rispondiiii',
+                            status: 'received'
+                        },
                     ],
                 },
                 {
