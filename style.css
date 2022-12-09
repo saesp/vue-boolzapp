@@ -286,10 +286,10 @@ ul.contacts-list{
     }
 
     .header-right{
-        position: fixed;
+        /* position: fixed;
         width: 100%;
         z-index: 100;
-        top: 0;
+        top: 0; */
         padding: 8px 10px 7px 8px;
     }
     .header-right section{
@@ -314,7 +314,7 @@ ul.contacts-list{
 
     .main-right{
         height: 84vh;
-        margin: 59.64px 0;
+        margin-bottom: 59.64px;
     }
     #sect-chat-list{
         display: block;
@@ -389,8 +389,11 @@ ul.contacts-list{
         .footer-right i:last-of-type{
             margin-right: 3%;
         }
-        .fa-paper-plane{
+        i.fa-paper-plane{
             color: #077367;
             cursor: pointer;
+        }
+        i.fa-paper-plane:hover{
+            color: #009688;
         }
 }
