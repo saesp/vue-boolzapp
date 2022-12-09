@@ -215,7 +215,7 @@ ul.contacts-list{
         font-size: 13px;
         margin-bottom: 10px;
         padding: 8px 7px;
-        border-radius: 5px;
+        border-radius: 10px;
         display: table;
     }
     .green-mess{
@@ -283,10 +283,11 @@ ul.contacts-list{
     /* section right */
     .sect-right{
         width: 100%;
+        position: relative;
     }
 
     .header-right{
-        padding: 7px 10px 7px 7px;
+        padding: 8px 10px 7px 8px;
     }
     .header-right section{
         margin: 0;
@@ -309,7 +310,8 @@ ul.contacts-list{
     }
 
     .main-right{
-        height: 83vh;
+        height: 84vh;
+        overflow-y: scroll;
     }
     #sect-chat-list{
         display: block;
@@ -325,16 +327,14 @@ ul.contacts-list{
     }
 
     .header-left{
-        font-size: 16px;
+        font-size: 17px;
     }
     
     .sect-head-i{
         gap: 20px;
-        font-size: 16px;
-        color: white;
     }
     .sect-head-i i{
-        font-size: 16px;
+        font-size: 17px;
         color: white;
     }
 
@@ -364,6 +364,7 @@ ul.contacts-list{
 
     .footer-right{
         position: absolute;
+        z-index: 100;
         bottom: 0;
         width: 100%;
         gap: 3%;
@@ -371,7 +372,6 @@ ul.contacts-list{
         background-color: #f3eeea;
     }
         .footer-right input{
-            z-index: 100;
             width: 65%;
             border-radius: 50px;
         }
