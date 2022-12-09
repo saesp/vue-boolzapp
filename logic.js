@@ -309,9 +309,9 @@ createApp({
         },
 
 
-        deleteForMe() {
-            this.contacts[this.index].messages.visibleMess = false;
-        },
+        // deleteForMe() {
+        //     this.contacts[this.index].messages.visibleMess = false;
+        // },
 
 
         // Func to go back in mobile
