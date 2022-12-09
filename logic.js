@@ -123,7 +123,7 @@ createApp({
                         },
                         {
                             date: '10/01/2020 15:50',
-                            message: 'sorry 😄',
+                            message: 'sorry',
                             status: 'received'
                         }
                     ],
@@ -283,22 +283,31 @@ createApp({
                     }
                 )
 
-            }, 1500);
+            }, 1200);
         },
+
 
         // Func to search a contact
         searchContact() {
-            for (let i = 0; i < this.contacts.length; i++){
-                if (this.contactLetters !== this.contacts[i].name) {
-                    this.contacts[i].visible = false;
+            
+            if (this.contactLetters == "") {
+                for (let i = 0; i < this.contacts.length; i++){
+                    this.contacts[i].visible = true;
+                }
+            } else {
+                for (let i = 0; i < this.contacts.length; i++){
+                    if (this.contactLetters !== this.contacts[i].name && this.contacts[i].visible == true) {
+                        this.contacts[i].visible = false;
+                    } else if (this.contactLetters == this.contacts[i].name && this.contacts[i].visible == false) {
+                        this.contacts[i].visible = true;
+                    }
                 }
             }
-    
-            if (this.contactLetters == "") {
-                this.contacts.visible = true;
-            }
+                
         },
 
+
+        // Func to go back in mobile
         goBack() {
             document.getElementById("sect-chat-list").style.display = "block";
             document.getElementById("sect-chat-mess").style.display = "none";

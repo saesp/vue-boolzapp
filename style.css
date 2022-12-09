@@ -178,9 +178,12 @@ ul.contacts-list{
         background-color:#eaeaea;
         border-bottom: 1px solid #eaeaea;
     }
-    .img-name-contact{
-        display: flex;
+    .contact.invisible{
+        display: none;
     }
+        .img-name-contact{
+            display: flex;
+        }
         .contact img{
             margin: 0 15px;
         }
@@ -295,7 +298,7 @@ ul.contacts-list{
     
     header{
         color: white;
-        background-color: rgb(5 94 84);
+        background-color: #007e69;
     }
 
     .signature{
@@ -378,7 +381,7 @@ ul.contacts-list{
         align-items: center;
     }
         .archive i{
-            color: #009688;
+            color: #007e69;
             background-color: unset;
             font-size: 18px;
             padding: 12px 10px;
@@ -420,7 +423,7 @@ ul.contacts-list{
             margin-right: 3%;
         }
         i.fa-paper-plane{
-            color: #077367;
+            color: #007e69;
             cursor: pointer;
         }
         i.fa-paper-plane:hover{

@@ -59,15 +59,15 @@
                             </nav>
         
                             <ul class="contacts-list">
-                                <li class="contact" v-for="(contact, index) in contacts" @click="clickContact(index)">
+                                <li v-for="(contact, index) in contacts" class="contact.visible === true ? 'contact' : 'contact invisible'" @click="clickContact(index)">
                                     <div class="img-name-contact">
-                                        <img v-if="contact.visible === true" class="img-avatar" :src=" 'img/avatar' + contact.avatar + '.jpg' " :alt="">
-                                        <span v-if="contact.visible === true" class="contact-middle">
+                                        <img class="img-avatar" :src=" 'img/avatar' + contact.avatar + '.jpg' " :alt="">
+                                        <span class="contact-middle">
                                             <div class="name-contact">{{contact.name}}</div>
                                             <div class="last-mess">{{contact.messages[contact.messages.length - 1].message}}</div>
                                         </span>
                                     </div>
-                                    <span v-if="contact.visible === true" class="last-date">{{contact.messages[contact.messages.length - 1].date}}</span>
+                                    <span class="last-date">{{contact.messages[contact.messages.length - 1].date}}</span>
                                 </li>
                                                         
                             </ul>
@@ -86,7 +86,7 @@
                                 <img class="img-avatar-header img-avatar" :src=" 'img/avatar' + contacts[indexActive].avatar + '.jpg' " alt="">
                                 <span> 
                                     <div class="name-contact">{{contacts[indexActive].name}}</div>
-                                    <div class="last-access" v-if="contacts[indexActive].messages[contacts[indexActive].messages.length - 1].status === 'received'">Ultimo accesso: {{contacts[indexActive].messages[contacts[indexActive].messages.length - 1].date}}</div>
+                                    <div class="last-access" v-if="contacts[indexActive].messages[contacts[indexActive].messages.length - 1].status === 'received'">Ultimo accesso oggi alle {{contacts[indexActive].messages[contacts[indexActive].messages.length - 1].date}}</div>
                                     <div class="last-access" v-else>Sta scrivendo...</div>
                                 </span>
                             </section>
@@ -168,15 +168,15 @@
                     </nav>
 
                     <ul class="contacts-list">
-                        <li class="contact" v-for="(contact, index) in contacts" @click="clickContact(index)">
+                        <li v-for="(contact, index) in contacts" :class="contact.visible === true ? 'contact' : 'contact invisible'" @click="clickContact(index)">
                             <div class="img-name-contact">
-                                <img v-if="contact.visible === true" class="img-avatar" :src=" 'img/avatar' + contact.avatar + '.jpg' " :alt="">
-                                <span v-if="contact.visible === true" class="contact-middle">
+                                <img class="img-avatar" :src=" 'img/avatar' + contact.avatar + '.jpg' " :alt="">
+                                <span class="contact-middle">
                                     <div class="name-contact">{{contact.name}}</div>
                                     <div class="last-mess">{{contact.messages[contact.messages.length - 1].message}}</div>
                                 </span>
                             </div>
-                            <span v-if="contact.visible === true" class="last-date">{{contact.messages[contact.messages.length - 1].date}}</span>
+                            <span class="last-date">{{contact.messages[contact.messages.length - 1].date}}</span>
                         </li>
                                                 
                     </ul>
@@ -197,7 +197,7 @@
                         <img class="img-avatar-header img-avatar" :src=" 'img/avatar' + contacts[indexActive].avatar + '.jpg' " alt="">
                         <span> 
                             <div class="name-contact" id="name-contact-right">{{contacts[indexActive].name}}</div>
-                            <div class="last-access" v-if="contacts[indexActive].messages[contacts[indexActive].messages.length - 1].status === 'received'">Ultimo accesso: {{contacts[indexActive].messages[contacts[indexActive].messages.length - 1].date}}</div>
+                            <div class="last-access" v-if="contacts[indexActive].messages[contacts[indexActive].messages.length - 1].status === 'received'">Ultimo accesso oggi alle {{contacts[indexActive].messages[contacts[indexActive].messages.length - 1].date}}</div>
                             <div class="last-access" v-else>Sta scrivendo...</div>
                         </span>
                     </section>
