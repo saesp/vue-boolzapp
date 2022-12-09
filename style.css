@@ -283,10 +283,13 @@ ul.contacts-list{
     /* section right */
     .sect-right{
         width: 100%;
-        position: relative;
     }
 
     .header-right{
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+        top: 0;
         padding: 8px 10px 7px 8px;
     }
     .header-right section{
@@ -363,7 +366,7 @@ ul.contacts-list{
 
 
     .footer-right{
-        position: absolute;
+        position: fixed;
         z-index: 100;
         bottom: 0;
         width: 100%;
@@ -385,5 +388,9 @@ ul.contacts-list{
         }
         .footer-right i:last-of-type{
             margin-right: 3%;
+        }
+        .fa-paper-plane{
+            color: #077367;
+            cursor: pointer;
         }
 }
