@@ -336,8 +336,8 @@ ul.contacts-list{
     }
 
     .main-right{
-        height: 84vh;
-        /* margin-bottom: 59.64px; */
+        height: 85vh;
+        margin-bottom: 59.64px;
         overflow-y: scroll;
     }
     #sect-chat-list{
