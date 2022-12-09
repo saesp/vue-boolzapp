@@ -10,6 +10,29 @@ body{
     background-color: #dcdbd2;
 }
 
+#loading{
+    background-color: rgb(226 255 201);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+}
+#loading > i{
+    color:#077367;
+    font-size: 60px;
+}
+#loading span{
+    color:#077367;
+    font-size: 11px;
+}
+#loading span i{
+    color:#077367;
+    font-size: 11px;
+}
+
 .bg-container1{
     height: 30vh;
     background-color: #009688;
@@ -314,7 +337,8 @@ ul.contacts-list{
 
     .main-right{
         height: 84vh;
-        margin-bottom: 59.64px;
+        /* margin-bottom: 59.64px; */
+        overflow-y: scroll;
     }
     #sect-chat-list{
         display: block;

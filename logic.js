@@ -1,3 +1,9 @@
+var loader = document.getElementById('loading');
+window.addEventListener('load', function loadState(){
+    loader.style.display = "none";
+})
+
+
 var today = new Date();
 var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 var time = today.getHours() + ":" + today.getMinutes() // + ":" + today.getSeconds();
