@@ -25,6 +25,7 @@ body{
     font-size: 60px;
 }
 #loading span{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color:#077367;
     font-size: 11px;
 }
@@ -298,8 +299,13 @@ ul.contacts-list{
     }
 
     .signature{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 10px;
         margin-left: 7px;
+    }
+    .signature i{
+        color: white;
+        font-size: 10px;
     }
 
 
