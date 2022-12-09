@@ -344,7 +344,6 @@ ul.contacts-list{
     .main-right{
         height: 85vh;
         margin-bottom: 59.64px;
-        overflow-y: scroll;
     }
     #sect-chat-list{
         display: block;
@@ -396,6 +395,7 @@ ul.contacts-list{
 
 
     .footer-right{
+        height: 59.64px;
         position: fixed;
         z-index: 100;
         bottom: 0;
