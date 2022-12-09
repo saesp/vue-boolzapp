@@ -315,7 +315,7 @@ ul.contacts-list{
     }
     .signature i{
         color: white;
-        font-size: 10px;
+        font-size: 9px;
     }
 
 
@@ -362,6 +362,7 @@ ul.contacts-list{
         display: none;
     }
 
+
     /* section left */
     .sect-left{
         width: 100%;
@@ -369,14 +370,14 @@ ul.contacts-list{
     }
 
     .header-left{
-        font-size: 17px;
+        font-size: 18px;
     }
     
     .sect-head-i{
         gap: 20px;
     }
     .sect-head-i i{
-        font-size: 17px;
+        font-size: 18px;
         color: white;
     }
 
