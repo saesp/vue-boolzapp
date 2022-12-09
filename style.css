@@ -161,6 +161,7 @@ nav{
 /* ul */
 ul.contacts-list{
     height: 84%;
+    background-color: white;
     overflow-y: auto;
 }
     .contacts-list li{
@@ -252,6 +253,12 @@ ul.contacts-list{
     .white-mess{
         background-color: white;
         margin-right: auto;
+    }
+    #delete-mess{
+        width: 19px;
+        border: 0;
+        background: none;
+        color: #b1b1b1;
     }
     .chat-date{
         color: #b1b1b1;

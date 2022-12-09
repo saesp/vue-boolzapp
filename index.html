@@ -59,7 +59,7 @@
                             </nav>
         
                             <ul class="contacts-list">
-                                <li v-for="(contact, index) in contacts" class="contact.visible === true ? 'contact' : 'contact invisible'" @click="clickContact(index)">
+                                <li v-for="(contact, index) in contacts" :class="contact.visible === true ? 'contact' : 'contact invisible'" @click="clickContact(index)">
                                     <div class="img-name-contact">
                                         <img class="img-avatar" :src=" 'img/avatar' + contact.avatar + '.jpg' " :alt="">
                                         <span class="contact-middle">
@@ -86,7 +86,7 @@
                                 <img class="img-avatar-header img-avatar" :src=" 'img/avatar' + contacts[indexActive].avatar + '.jpg' " alt="">
                                 <span> 
                                     <div class="name-contact">{{contacts[indexActive].name}}</div>
-                                    <div class="last-access" v-if="contacts[indexActive].messages[contacts[indexActive].messages.length - 1].status === 'received'">Ultimo accesso oggi alle {{contacts[indexActive].messages[contacts[indexActive].messages.length - 1].date}}</div>
+                                    <div class="last-access" v-if="contacts[indexActive].messages[contacts[indexActive].messages.length - 1].status === 'received'">Ultimo accesso: {{contacts[indexActive].messages[contacts[indexActive].messages.length - 1].date}}</div>
                                     <div class="last-access" v-else>Sta scrivendo...</div>
                                 </span>
                             </section>
@@ -103,13 +103,26 @@
                         <!-- main right -->
                         <main class="main-right">
                             <div v-for="(mess, index) in contacts[indexActive].messages">
-                                <div :class="mess.status === 'sent' ? 'active green-mess' : ''" class="chat-mess">
+                                <div :class="mess.status === 'sent' ? 'active green-mess' : ''" if="mess.visibleMess === true" class="chat-mess">
                                     <span>{{mess.message}}</span>
-                                    <span class="chat-date">{{mess.date}}</span>
+                                    <span>
+                                        <!-- <select name="delete" value="" id="delete-mess">
+                                            <option @click="deleteForMe(index)">Delelete for me</option>
+                                            <option @click="deleteForAll(index)">Delete for all</option>
+                                        </select> -->
+                                       <span class="chat-date">{{mess.date}}</span> 
+                                    </span>
                                 </div>
                                 <div :class="mess.status === 'received' ? 'active white-mess' : ''" class="chat-mess">
                                     <span>{{mess.message}}</span>
-                                    <span class="chat-date">{{mess.date}}</span></div>
+                                    <span>
+                                        <!-- <select name="delete" value="" id="delete-mess">
+                                            <option @click="deleteForMe">Delelete for me</option>
+                                            <option @click="deleteForAll">Delete for all</option>
+                                        </select> -->
+                                       <span class="chat-date">{{mess.date}}</span> 
+                                    </span>
+                                </div>
                             </div>
                         </main>
 
@@ -197,7 +210,7 @@
                         <img class="img-avatar-header img-avatar" :src=" 'img/avatar' + contacts[indexActive].avatar + '.jpg' " alt="">
                         <span> 
                             <div class="name-contact" id="name-contact-right">{{contacts[indexActive].name}}</div>
-                            <div class="last-access" v-if="contacts[indexActive].messages[contacts[indexActive].messages.length - 1].status === 'received'">Ultimo accesso oggi alle {{contacts[indexActive].messages[contacts[indexActive].messages.length - 1].date}}</div>
+                            <div class="last-access" v-if="contacts[indexActive].messages[contacts[indexActive].messages.length - 1].status === 'received'">Ultimo accesso: {{contacts[indexActive].messages[contacts[indexActive].messages.length - 1].date}}</div>
                             <div class="last-access" v-else>Sta scrivendo...</div>
                         </span>
                     </section>
@@ -216,11 +229,24 @@
                     <div v-for="(mess, index) in contacts[indexActive].messages">
                         <div :class="mess.status === 'sent' ? 'active green-mess' : ''" class="chat-mess">
                             <span>{{mess.message}}</span>
-                            <span class="chat-date">{{mess.date}}</span>
+                            <span>
+                                <!-- <select name="delete" value="" id="delete-mess">
+                                    <option>Delelete for me</option>
+                                    <option>Delete for all</option>
+                                </select> -->
+                               <span class="chat-date">{{mess.date}}</span> 
+                            </span>
                         </div>
                         <div :class="mess.status === 'received' ? 'active white-mess' : ''" class="chat-mess">
                             <span>{{mess.message}}</span>
-                            <span class="chat-date">{{mess.date}}</span></div>
+                            <span>
+                                <!-- <select name="delete" value="" id="delete-mess">
+                                    <option>Delelete for me</option>
+                                    <option>Delete for all</option>
+                                </select> -->
+                               <span class="chat-date">{{mess.date}}</span> 
+                            </span>
+                        </div>
                     </div>
                 </main>
 

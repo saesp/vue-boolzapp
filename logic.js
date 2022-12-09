@@ -262,7 +262,8 @@ createApp({
                 {
                     date: time, 
                     message: this.newMessage, 
-                    status: 'sent'
+                    status: 'sent',
+                    visibleMess: true
                 }
             );
             
@@ -279,7 +280,8 @@ createApp({
                     {
                         date: time, 
                         message: thing,
-                        status: 'received'
+                        status: 'received',
+                        visibleMess: true
                     }
                 )
 
@@ -304,6 +306,11 @@ createApp({
                 }
             }
                 
+        },
+
+
+        deleteForMe() {
+            this.contacts[this.index].messages.visibleMess = false;
         },
 
 
