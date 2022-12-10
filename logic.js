@@ -230,8 +230,13 @@ createApp({
                     messages: [
                         {
                             date: '10/01/2020 9:30',
-                            message: 'Eccomi',
+                            message: 'Mi chiami?',
                             status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 9:35',
+                            message: 'Sto seguendo la lezione',
+                            status: 'received'
                         }
                     ],
                 }
