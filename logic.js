@@ -74,14 +74,9 @@ createApp({
                         },
                         {
                             date: '20/03/2020 16:35',
-                            message: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                            message: 'Ti faccio sapere 😀',
                             status: 'sent'
                         },
-                        {
-                            date: '20/03/2020 16:36',
-                            message: '😀😀',
-                            status: 'sent'
-                        }
                     ],
                 },
                 {
@@ -129,6 +124,23 @@ createApp({
                     ],
                 },
                 {
+                    name: 'Claudia',
+                    avatar: '_io',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '10/01/2020 15:30',
+                            message: 'Ciao Claudia, hai novità?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:50',
+                            message: 'Non ancora',
+                            status: 'received'
+                        },
+                    ],
+                },
+                {
                     name: 'Alessandro L.',
                     avatar: '_1',
                     visible: true,
@@ -145,36 +157,9 @@ createApp({
                         },
                         {
                             date: '10/01/2020 15:50',
-                            message: 'stasera la sento💛',
+                            message: 'stasera la sento😘👍',
                             status: 'received'
                         }
-                    ],
-                },
-                {
-                    name: 'Claudia',
-                    avatar: '_io',
-                    visible: true,
-                    messages: [
-                        {
-                            date: '10/01/2020 15:30',
-                            message: 'Ciao Claudia, hai novità?',
-                            status: 'sent'
-                        },
-                        {
-                            date: '10/01/2020 15:50',
-                            message: 'Non ancora',
-                            status: 'received'
-                        },
-                        {
-                            date: '10/01/2020 15:51',
-                            message: 'Fammi sapere',
-                            status: 'sent'
-                        },
-                        {
-                            date: '10/01/2020 15:53',
-                            message: 'Okay👍',
-                            status: 'received'
-                        },
                     ],
                 },
                 {
@@ -235,6 +220,18 @@ createApp({
                             date: '10/01/2020 15:50',
                             message: 'Bene e tu?',
                             status: 'received'
+                        }
+                    ],
+                },
+                {
+                    name: 'Miriam',
+                    avatar: '_3',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '10/01/2020 9:30',
+                            message: 'Eccomi',
+                            status: 'sent'
                         }
                     ],
                 }
