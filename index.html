@@ -110,7 +110,7 @@
                                             <option @click="deleteForMe(index)">Delelete for me</option>
                                             <option @click="deleteForAll(index)">Delete for all</option>
                                         </select> -->
-                                       <span class="chat-date">{{mess.date}}</span> 
+                                       <span class="chat-date">{{mess.date}} <i class="fa-solid fa-check-double"></i></span> 
                                     </span>
                                 </div>
                                 <div :class="mess.status === 'received' ? 'active white-mess' : ''" class="chat-mess">
@@ -152,7 +152,7 @@
                 <header class="header-left">
 
                     <section>
-                        <span>WhatsApp</span>
+                        <span><strong>WhatsApp</strong></span>
                         <span class="signature">by <i class="fa-solid fa-s"></i><i class="fa-solid fa-e"></i> <i class="fa-regular fa-face-smile"></i></span>
                     </section>
 
@@ -234,7 +234,7 @@
                                     <option>Delelete for me</option>
                                     <option>Delete for all</option>
                                 </select> -->
-                               <span class="chat-date">{{mess.date}}</span> 
+                               <span class="chat-date">{{mess.date}} <i class="fa-solid fa-check-double"></i></span> 
                             </span>
                         </div>
                         <div :class="mess.status === 'received' ? 'active white-mess' : ''" class="chat-mess">

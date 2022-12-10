@@ -263,11 +263,15 @@ ul.contacts-list{
     .chat-date{
         color: #b1b1b1;
         font-size: 10px;
-        margin-left: 30px;
+        margin-left: 12px;
         position: relative;
         margin-bottom: 4px;
         bottom: -9px;
         float: right;
+    }
+    .chat-date i{
+        color: #b1b1b1;
+        font-size: 10px;
     }
 
 /* footer RIGHT */
@@ -358,7 +362,9 @@ ul.contacts-list{
         .search i{
             line-height: 43.9px;
         }
-
+    .name-contact{
+        font-size: 16px;
+    }
     .last-mess{
         color: #89949e;
     }
@@ -419,14 +425,17 @@ ul.contacts-list{
         .chat-date{
             color: #89949e;
         }
-
+        .chat-date i{
+            color: #89949e;
+        }
+        
     .footer-right{
         height: 59.64px;
         position: fixed;
         z-index: 100;
         bottom: 0;
         width: 100%;
-        gap: 3%;
+        gap: 4.5%;
         justify-content: center;
         background-color: #f3eeea;
     }
@@ -440,10 +449,10 @@ ul.contacts-list{
             color: #89949e;
         }
         .footer-right i:first-of-type{
-            margin-left: 3%;
+            margin-left: 4.5%;
         }
         .footer-right i:last-of-type{
-            margin-right: 3%;
+            margin-right: 4.5%;
         }
         i.fa-paper-plane{
             color: #00a885;
