@@ -11,7 +11,7 @@ body{
 }
 
 #loading{
-    background-color: rgb(226 255 201);
+    background-color: #e9ffd9;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -247,7 +247,7 @@ ul.contacts-list{
         display: table;
     }
     .green-mess{
-        background-color: rgb(226 255 201);
+        background-color: #e9ffd9;
         margin-left: auto;
     }
     .white-mess{
@@ -276,7 +276,7 @@ ul.contacts-list{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f3eeea;
+    background-color: #f6f6f6;
 }
     .footer-right input{
         padding: 0 10px;
@@ -319,50 +319,6 @@ ul.contacts-list{
     }
 
 
-    /* section right */
-    .sect-right{
-        width: 100%;
-    }
-
-    .header-right{
-        /* position: fixed;
-        width: 100%;
-        z-index: 100;
-        top: 0; */
-        padding: 8px 10px 7px 8px;
-    }
-    .header-right section{
-        margin: 0;
-    }
-    .go-back i{
-        color: white;
-        padding: 4px 3px;
-        border-radius: 50px;
-        cursor: pointer;
-    }
-    .go-back i:hover{
-        background-color: #077367;
-    }
-
-    .img-avatar-header.img-avatar {
-        margin-left: 5px;
-    }
-    #name-contact-right{
-        color: white;
-    }
-
-    .main-right{
-        height: 85vh;
-        margin-bottom: 59.64px;
-    }
-    #sect-chat-list{
-        display: block;
-    }
-    #sect-chat-mess{
-        display: none;
-    }
-
-
     /* section left */
     .sect-left{
         width: 100%;
@@ -372,14 +328,13 @@ ul.contacts-list{
     .header-left{
         font-size: 18px;
     }
-    
-    .sect-head-i{
-        gap: 20px;
-    }
-    .sect-head-i i{
-        font-size: 18px;
-        color: white;
-    }
+        .sect-head-i{
+            gap: 20px;
+        }
+        .sect-head-i i{
+            font-size: 18px;
+            color: white;
+        }
 
     .archive{
         color: black;
@@ -400,10 +355,70 @@ ul.contacts-list{
     .search{
         height: 50%;
     }
-    .search i{
-        line-height: 43.9px;
+        .search i{
+            line-height: 43.9px;
+        }
+
+    .last-mess{
+        color: #89949e;
+    }
+    .last-date{
+        color: #89949e;
     }
 
+    
+    /* section right */
+    .sect-right{
+        width: 100%;
+    }
+
+    .header-right{
+        /* position: fixed;
+        width: 100%;
+        z-index: 100;
+        top: 0; */
+        padding: 8px 10px 7px 8px;
+    }
+        .header-right section{
+            margin: 0;
+        }
+        .go-back i{
+            color: white;
+            padding: 4px 3px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .go-back i:hover{
+            background-color: #077367;
+        }
+        .img-avatar-header.img-avatar {
+            margin-left: 5px;
+        }
+        #name-contact-right{
+            color: white;
+        }
+        .last-access{
+            color: #89949e;
+            font-size: 10px;
+        }
+
+    .main-right{
+        height: 85vh;
+        margin-bottom: 59.64px;
+    }
+        #sect-chat-list{
+            display: block;
+        }
+        #sect-chat-mess{
+            display: none;
+        }
+
+        #delete-mess{
+            color: #89949e;
+        }
+        .chat-date{
+            color: #89949e;
+        }
 
     .footer-right{
         height: 59.64px;
@@ -422,7 +437,7 @@ ul.contacts-list{
         .footer-right i{
             margin: 0;
             font-size: 19px;
-            color: grey;
+            color: #89949e;
         }
         .footer-right i:first-of-type{
             margin-left: 3%;
@@ -431,10 +446,10 @@ ul.contacts-list{
             margin-right: 3%;
         }
         i.fa-paper-plane{
-            color: #007e69;
+            color: #00a885;
             cursor: pointer;
         }
         i.fa-paper-plane:hover{
-            color: #009688;
+            color: #007e69;
         }
 }
