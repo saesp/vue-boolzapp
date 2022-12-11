@@ -265,10 +265,10 @@ createApp({
                     date: time, 
                     message: this.newMessage, 
                     status: 'sent',
-                    visibleMess: true
+                    // visibleMess: true
                 }
             );
-            
+
             this.newMessage = "";
 
             // Func to receive answers after 1 second
@@ -283,7 +283,7 @@ createApp({
                         date: time, 
                         message: thing,
                         status: 'received',
-                        visibleMess: true
+                        // visibleMess: true
                     }
                 )
 

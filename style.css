@@ -456,10 +456,10 @@ ul.contacts-list{
             margin-right: 4.5%;
         }
         i.fa-paper-plane{
-            color: #00a885;
+            color: #007e69;
             cursor: pointer;
         }
         i.fa-paper-plane:hover{
-            color: #007e69;
+            color: #00a885 ;
         }
 }
