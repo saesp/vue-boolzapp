@@ -81,7 +81,7 @@ i{
     color: #b1b1b1;
 }
 .sect-head-i i{
-    margin-left: 10px;
+    margin-left: 20px;
     font-size: 17px;
     color: #b1b1b1;
 }
@@ -293,4 +293,7 @@ ul.contacts-list{
         margin: 0 41px;
         font-size: 19px;
         color: grey;
+    }
+    .fa-paper-plane{
+        cursor: pointer;
     }
