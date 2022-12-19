@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +11,14 @@
     <script src="https://cdn.jsdelivr.net/npm/luxon@3.1.1/build/global/luxon.min.js"></script>
     <title>WhatsApp by SE</title>
 </head>
-<body> 
-    
+
+<body>
+
     <div id="loading">
         <!-- <i class="fa-solid fa-spinner"></i> -->
         <i class="fa-brands fa-whatsapp"></i>
-        <span>By <i class="fa-solid fa-s"></i><i class="fa-solid fa-e"></i> <i class="fa-regular fa-face-smile"></i></span>
+        <span>By <i class="fa-solid fa-s"></i><i class="fa-solid fa-e"></i> <i
+                class="fa-regular fa-face-smile"></i></span>
     </div>
 
     <div id="app">
@@ -23,28 +26,28 @@
         <div class="bg-container1">
             <div class="bg-container2">
                 <div class="container">
-                    
+
                     <!-- SECTION LEFT -->
                     <section class="sect-left">
                         <!-- header left -->
                         <header class="header-left">
-    
+
                             <section>
                                 <img class="img-avatar-header img-avatar" src="img/me.jpg" alt="">
                                 <span class="name-contact">Salvatore Esposito</span>
                             </section>
-    
+
                             <section class="sect-head-i">
                                 <i class="fa-solid fa-circle-notch"></i>
                                 <i class="fa-solid fa-message"></i>
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </section>
                         </header>
-        
-        
+
+
                         <!-- main left -->
                         <main class="main-left">
-    
+
                             <nav>
                                 <div class="notifications">
                                     <i class="fa-solid fa-bell-slash"></i>
@@ -55,63 +58,75 @@
                                 </div>
                                 <div class="search">
                                     <i @click="searchContact" class="fa-solid fa-magnifying-glass"></i>
-                                    <input type="search" v-model="contactLetters" @KeyUp="searchContact" placeholder="Cerca o inizia una nuova chat" >
+                                    <input type="search" v-model="contactLetters" @KeyUp="searchContact"
+                                        placeholder="Cerca o inizia una nuova chat">
                                 </div>
                             </nav>
-        
+
                             <ul class="contacts-list">
-                                <li v-for="(contact, index) in contacts" :class="contact.visible === true ? 'contact' : 'contact invisible'" @click="clickContact(index)">
+                                <li v-for="(contact, index) in contacts"
+                                    :class="contact.visible === true ? 'contact' : 'contact invisible'"
+                                    @click="clickContact(index)">
                                     <div class="img-name-contact">
                                         <img class="img-avatar" :src=" 'img/avatar' + contact.avatar + '.jpg' " :alt="">
                                         <span class="contact-middle">
                                             <div class="name-contact">{{contact.name}}</div>
-                                            <div class="last-mess">{{contact.messages[contact.messages.length - 1].message}}</div>
+                                            <div class="last-mess">{{contact.messages[contact.messages.length -
+                                                1].message}}</div>
                                         </span>
                                     </div>
-                                    <span class="last-date">{{contact.messages[contact.messages.length - 1].date}}</span>
+                                    <span class="last-date">{{contact.messages[contact.messages.length -
+                                        1].date}}</span>
                                 </li>
-                                                        
+
                             </ul>
                         </main>
                     </section>
-                    
-        
+
+
 
                     <!-- SECTION RIGHT -->
                     <section class="sect-right">
-                        
+
                         <!-- header right -->
                         <header class="header-right">
 
                             <section>
-                                <img class="img-avatar-header img-avatar" :src=" 'img/avatar' + contacts[indexActive].avatar + '.jpg' " alt="">
-                                <span> 
+                                <img class="img-avatar-header img-avatar"
+                                    :src=" 'img/avatar' + contacts[indexActive].avatar + '.jpg' " alt="">
+                                <span>
                                     <div class="name-contact">{{contacts[indexActive].name}}</div>
-                                    <div class="last-access" v-if="contacts[indexActive].messages[contacts[indexActive].messages.length - 1].status === 'received'">Ultimo accesso: {{contacts[indexActive].messages[contacts[indexActive].messages.length - 1].date}}</div>
+                                    <div class="last-access"
+                                        v-if="contacts[indexActive].messages[contacts[indexActive].messages.length - 1].status === 'received'">
+                                        Ultimo accesso:
+                                        {{contacts[indexActive].messages[contacts[indexActive].messages.length -
+                                        1].date}}</div>
                                     <div class="last-access" v-else>Sta scrivendo...</div>
                                 </span>
                             </section>
-    
+
                             <section class="sect-head-i">
                                 <i class="fa-solid fa-paperclip"></i>
                                 <i class="fa-solid fa-magnifying-glass"></i>
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </section>
                         </header>
-                       
 
-                    
+
+
                         <!-- main right -->
                         <main class="main-right">
                             <div v-for="(mess, index) in contacts[indexActive].messages">
-                                <div :class="mess.status === 'sent' ? 'active green-mess' : ''" if="mess.visibleMess === true" class="chat-mess">
+                                <div :class="mess.status === 'sent' ? 'active green-mess' : ''"
+                                    if="mess.visibleMess === true" class="chat-mess">
                                     <span>{{mess.message}}</span>
                                     <span>
                                         <!-- <select name="delete" value="" id="delete-mess">
                                             <option @click="deleteForMe(index)">Delelete for me</option>
                                             <option @click="deleteForAll(index)">Delete for all</option>
                                         </select> -->
-                                       <span class="chat-date">{{mess.date}} <i class="fa-solid fa-check-double"></i></span> 
+                                        <span class="chat-date">{{mess.date}} <i
+                                                class="fa-solid fa-check-double"></i></span>
                                     </span>
                                 </div>
                                 <div :class="mess.status === 'received' ? 'active white-mess' : ''" class="chat-mess">
@@ -121,33 +136,34 @@
                                             <option @click="deleteForMe">Delelete for me</option>
                                             <option @click="deleteForAll">Delete for all</option>
                                         </select> -->
-                                       <span class="chat-date">{{mess.date}}</span> 
+                                        <span class="chat-date">{{mess.date}}</span>
                                     </span>
                                 </div>
                             </div>
                         </main>
 
-                   
-                
+
+
                         <!-- footer right -->
                         <footer class="footer-right">
                             <i class="fa-regular fa-face-smile"></i>
-                            <input type="search" placeholder="Invia un messaggio" v-model="newMessage" @KeyUp.enter="send">
+                            <input type="search" placeholder="Invia un messaggio" v-model="newMessage"
+                                @KeyUp.enter="send">
                             <i v-if="newMessage == ''" class="fa-solid fa-microphone"></i>
                             <i v-else v-model="newMessage" @click="send" class="fa-solid fa-paper-plane"></i>
                         </footer>
-        
+
                     </section>
-               </div>
+                </div>
             </div>
         </div>
-        
-    
+
+
 
 
         <!-- ****** MOBILE ****** -->
         <div class="container-mobile">
-            
+
             <!-- SECTION LEFT -->
             <section class="sect-left" id="sect-chat-list">
                 <!-- header left -->
@@ -155,7 +171,8 @@
 
                     <section>
                         <span><strong>WhatsApp</strong></span>
-                        <span class="signature">by <i class="fa-solid fa-s"></i><i class="fa-solid fa-e"></i> <i class="fa-regular fa-face-smile"></i></span>
+                        <span class="signature">by <i class="fa-solid fa-s"></i><i class="fa-solid fa-e"></i> <i
+                                class="fa-regular fa-face-smile"></i></span>
                     </section>
 
                     <section class="sect-head-i">
@@ -178,40 +195,50 @@
                         </div>
                         <div class="search">
                             <i @click="searchContact" class="fa-solid fa-magnifying-glass"></i>
-                            <input type="search" v-model="contactLetters" @KeyUp="searchContact" placeholder="Cerca o inizia una nuova chat" >
+                            <input type="search" v-model="contactLetters" @KeyUp="searchContact"
+                                @keydown="searchContact" placeholder="Cerca o inizia una nuova chat">
                         </div>
                     </nav>
 
                     <ul class="contacts-list">
-                        <li v-for="(contact, index) in contacts" :class="contact.visible === true ? 'contact' : 'contact invisible'" @click="clickContact(index)">
+                        <li v-for="(contact, index) in contacts"
+                            :class="contact.visible === true ? 'contact' : 'contact invisible'"
+                            @click="clickContact(index)">
                             <div class="img-name-contact">
                                 <img class="img-avatar" :src=" 'img/avatar' + contact.avatar + '.jpg' " :alt="">
                                 <span class="contact-middle">
                                     <div class="name-contact"><strong>{{contact.name}}</strong></div>
-                                    <div class="last-mess">{{contact.messages[contact.messages.length - 1].message}}</div>
+                                    <div class="last-mess">{{contact.messages[contact.messages.length - 1].message}}
+                                    </div>
                                 </span>
                             </div>
                             <span class="last-date">{{contact.messages[contact.messages.length - 1].date}}</span>
-                        </li>                     
+                        </li>
                     </ul>
                 </main>
             </section>
-            
+
 
 
             <!-- SECTION RIGHT -->
             <section class="sect-right" id="sect-chat-mess">
-                
+
                 <!-- header right -->
                 <header class="header-right">
                     <section>
                         <section class="go-back" @click="goBack">
                             <i class="fa-solid fa-arrow-left"></i>
                         </section>
-                        <img class="img-avatar-header img-avatar" :src=" 'img/avatar' + contacts[indexActive].avatar + '.jpg' " alt="">
-                        <span> 
-                            <div class="name-contact" id="name-contact-right"><strong>{{contacts[indexActive].name}}</strong></div>
-                            <div class="last-access" v-if="contacts[indexActive].messages[contacts[indexActive].messages.length - 1].status === 'received'">Ultimo accesso: {{contacts[indexActive].messages[contacts[indexActive].messages.length - 1].date}}</div>
+                        <img class="img-avatar-header img-avatar"
+                            :src=" 'img/avatar' + contacts[indexActive].avatar + '.jpg' " alt="">
+                        <span>
+                            <div class="name-contact" id="name-contact-right">
+                                <strong>{{contacts[indexActive].name}}</strong>
+                            </div>
+                            <div class="last-access"
+                                v-if="contacts[indexActive].messages[contacts[indexActive].messages.length - 1].status === 'received'">
+                                Ultimo accesso: {{contacts[indexActive].messages[contacts[indexActive].messages.length -
+                                1].date}}</div>
                             <div class="last-access" v-else>Sta scrivendo...</div>
                         </span>
                     </section>
@@ -222,9 +249,9 @@
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </section>
                 </header>
-               
 
-            
+
+
                 <!-- main right -->
                 <main class="main-right">
                     <div v-for="(mess, index) in contacts[indexActive].messages">
@@ -235,7 +262,7 @@
                                     <option>Delelete for me</option>
                                     <option>Delete for all</option>
                                 </select> -->
-                               <span class="chat-date">{{mess.date}} <i class="fa-solid fa-check-double"></i></span> 
+                                <span class="chat-date">{{mess.date}} <i class="fa-solid fa-check-double"></i></span>
                             </span>
                         </div>
                         <div :class="mess.status === 'received' ? 'active white-mess' : ''" class="chat-mess">
@@ -245,32 +272,34 @@
                                     <option>Delelete for me</option>
                                     <option>Delete for all</option>
                                 </select> -->
-                               <span class="chat-date">{{mess.date}}</span> 
+                                <span class="chat-date">{{mess.date}}</span>
                             </span>
                         </div>
                     </div>
                 </main>
 
-           
-        
+
+
                 <!-- footer right -->
                 <footer class="footer-right">
                     <i class="fa-regular fa-face-smile"></i>
                     <i class="fa-solid fa-paperclip"></i>
 
-                    <input type="search" placeholder="Invia un messaggio" v-model="newMessage" @KeyUp.enter="send">
-                    
+                    <input type="search" placeholder="Invia un messaggio" v-model="newMessage" @KeyUp.enter="send"
+                        @keydown="send">
+
                     <i class="fa-solid fa-camera"></i>
                     <i v-if="newMessage === ''" class="fa-solid fa-microphone"></i>
                     <i v-else v-model="newMessage" @click="send" class="fa-solid fa-paper-plane"></i>
                 </footer>
 
             </section>
-       </div>
-    
-    
+        </div>
+
+
         <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
         <script src="logic.js"></script>
     </div>
 </body>
+
 </html>
