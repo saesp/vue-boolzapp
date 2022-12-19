@@ -285,8 +285,7 @@
                     <i class="fa-regular fa-face-smile"></i>
                     <i class="fa-solid fa-paperclip"></i>
 
-                    <input type="search" placeholder="Invia un messaggio" v-model="newMessage" @KeyUp.enter="send"
-                        @keydown="send">
+                    <input type="search" placeholder="Invia un messaggio" v-model="newMessage" @KeyUp.enter="send">
 
                     <i class="fa-solid fa-camera"></i>
                     <i v-if="newMessage === ''" class="fa-solid fa-microphone"></i>
