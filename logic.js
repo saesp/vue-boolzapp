@@ -1,15 +1,15 @@
 var loader = document.getElementById('loading');
-window.addEventListener('load', function loadState(){
+window.addEventListener('load', function loadState() {
     loader.style.display = "none";
 })
 
 
 var today = new Date();
-var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 var time = today.getHours() + ":" + today.getMinutes() // + ":" + today.getSeconds();
-var dateTime = date+' '+time;
+var dateTime = date + ' ' + time;
 
-const {createApp} = Vue;
+const { createApp } = Vue;
 
 createApp({
     data() {
@@ -50,7 +50,7 @@ createApp({
                             date: '10/01/2020 16:23',
                             message: 'Ci vediamo domani?',
                             status: 'received'
-                        },{
+                        }, {
                             date: '10/01/2020 23:22',
                             message: 'Rispondiiii',
                             status: 'received'
@@ -250,7 +250,7 @@ createApp({
 
     methods: {
         // Func to click a contact
-        clickContact(numAvatar){
+        clickContact(numAvatar) {
             this.indexActive = numAvatar;
 
             //mobile
@@ -259,11 +259,11 @@ createApp({
         },
 
         // Func to send new message
-        send(){
+        send() {
             this.contacts[this.indexActive].messages.push(
                 {
-                    date: time, 
-                    message: this.newMessage, 
+                    date: time,
+                    message: this.newMessage,
                     status: 'sent',
                     // visibleMess: true
                 }
@@ -276,11 +276,11 @@ createApp({
 
                 // random answers
                 const things = ['Ciaooo', 'Come stai??', 'Non mi va di parlare', 'Non scrivermi, grazie', 'Che vuoi?', 'Ti aspetto', 'Ci vediamo?', 'Finalmente mi scrivi'];
-                let thing = things[Math.floor(Math.random()*things.length)];
+                let thing = things[Math.floor(Math.random() * things.length)];
 
                 this.contacts[this.indexActive].messages.push(
                     {
-                        date: time, 
+                        date: time,
                         message: thing,
                         status: 'received',
                         // visibleMess: true
@@ -293,13 +293,13 @@ createApp({
 
         // Func to search a contact
         searchContact() {
-            
+
             if (this.contactLetters == "") {
-                for (let i = 0; i < this.contacts.length; i++){
+                for (let i = 0; i < this.contacts.length; i++) {
                     this.contacts[i].visible = true;
                 }
             } else {
-                for (let i = 0; i < this.contacts.length; i++){
+                for (let i = 0; i < this.contacts.length; i++) {
                     if (this.contactLetters !== this.contacts[i].name && this.contacts[i].visible == true) {
                         this.contacts[i].visible = false;
                     } else if (this.contactLetters == this.contacts[i].name && this.contacts[i].visible == false) {
@@ -307,12 +307,12 @@ createApp({
                     }
                 }
             }
-                
+
         },
 
 
-        // deleteForMe() {
-        //     this.contacts[this.index].messages.visibleMess = false;
+        // deleteForMe(index) {
+        //     this.contacts[this.indexActive].messages.splice(index, 1);
         // },
 
 
