@@ -289,8 +289,7 @@
                     <input type="search" placeholder="Invia un messaggio" v-model="newMessage" @KeyUp.enter="send">
 
                     <i class="fa-solid fa-camera"></i>
-                    <i v-if="newMessage === ''" class="fa-solid fa-microphone"></i>
-                    <i v-else v-model="newMessage" @click="send" class="fa-solid fa-paper-plane"></i>
+                    <i v-model="newMessage" @click="send" class="fa-solid fa-paper-plane"></i>
                 </footer>
 
             </section>
